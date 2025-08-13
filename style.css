@@ -5,6 +5,7 @@ body{
     max-width: 100%;
     height: 100%;
     overflow: hidden;
+    
 }
 
 h1{
@@ -49,4 +50,12 @@ h1{
     animation: floatUp 15s;
     animation-direction: normal;
     animation-fill-mode: forwards;
+}
+
+.noHighlight {
+  user-select: none;
+  -webkit-user-select: none; 
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  -webkit-touch-callout: none; 
 }

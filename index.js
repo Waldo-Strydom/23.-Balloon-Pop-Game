@@ -12,8 +12,10 @@ const missOut = document.getElementById("missOut")
 const placeNewBalloon = ()=>{
     let newBalloon = document.createElement("img")
     newBalloon.setAttribute("src", "./Assets/Balloon.png")
+    newBalloon.setAttribute('draggable', 'false');
     newBalloon.classList.add("balloonPic")
     newBalloon.classList.add("float")
+    newBalloon.classList.add("noHighlight")
 
     let red = Math.floor(Math.random()*255)
     let green = Math.floor(Math.random()*255)
