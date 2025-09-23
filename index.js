@@ -22,7 +22,7 @@ const placeNewBalloon = ()=>{
     let blue = Math.floor(Math.random()*255)
 
     newBalloon.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
-    newBalloon.style.left=`${pos}px`;
+    newBalloon.style.left=`${pos}vw`;
     newBalloon.style.animation = `floatUp ${speed}s`;
 
     document.body.appendChild(newBalloon)
@@ -39,10 +39,8 @@ const placeNewBalloon = ()=>{
 
 
 const getPos = ()=>{
-let margin = windowWidth*20/100
-let maxWidth = windowWidth-margin
-pos = Math.floor(Math.random()*maxWidth)
-placeNewBalloon()
+pos = Math.floor(Math.random()*80)+10
+
 }
 
 const getSpeed = ()=>{
@@ -69,6 +67,7 @@ if(miss<5){
 checkMissed()    
 getSpeed()
 getPos()
+placeNewBalloon()
 }else{
     end= true;
     endScreen()
